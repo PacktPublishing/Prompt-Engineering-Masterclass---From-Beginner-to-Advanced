@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_toolbox"
+version = "0.1.0"
+description = "A brief description of your library"
+authors = [
+    { name = "Lauro Müller", email = "contact@lauromueller.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "click==8.2.1",
+    "python-dotenv==1.1.1",
+    "litellm==1.74.14",
+    "GitPython==3.1.45"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+ai-toolbox = "ai_toolbox.main:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.4.1",
+    "pytest-mock==3.14.1",
+    "bandit==1.8.6",
+    "pylint==3.3.8"
+]
